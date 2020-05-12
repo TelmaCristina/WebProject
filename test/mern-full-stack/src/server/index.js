@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const server = express();
 // the value for dbname should match your database name
-const dbname = 'userslist';
+const dbname = 'goveg';
 
 // serve files from the dist directory
 server.use(express.static('dist'));
@@ -31,8 +31,8 @@ server.use(bodyParser.json());
 // DEFINE ENDPOINTS
 
 // retrieve all user objects from DB
-server.get('/api/users', (req, res) => {
-  db.collection('users').find().toArray((err, result) => {
+server.get('/api/vegrecipes', (req, res) => {
+  db.collection('vegrecipes').find().toArray((err, result) => {
     if (err) throw err;
 
     console.log(result);
@@ -41,8 +41,8 @@ server.get('/api/users', (req, res) => {
 });
 
 // retrieve user with specific ID from DB
-server.get('/api/users/:id', (req, res) => {
-  db.collection('users').findOne({_id: new ObjectID(req.params.id) }, (err, result) => {
+server.get('/api/vegrecipes/:id', (req, res) => {
+  db.collection('vegrecipes').findOne({_id: new ObjectID(req.params.id) }, (err, result) => {
     if (err) throw err;
 
     console.log(result);
@@ -51,8 +51,8 @@ server.get('/api/users/:id', (req, res) => {
 });
 
 // delete user with specific ID from DB
-server.delete('/api/users', (req, res) => {
-  db.collection('users').deleteOne( {_id: new ObjectID(req.body.id) }, err => {
+server.delete('/api/vegrecipes', (req, res) => {
+  db.collection('vegrecipes').deleteOne( {_id: new ObjectID(req.body.id) }, err => {
     if (err) return res.send(err);
 
     console.log('deleted from database');
@@ -61,8 +61,8 @@ server.delete('/api/users', (req, res) => {
 });
 
 // create new user based on info supplied in request body
-server.post('/api/users', (req, res) => {
-  db.collection('users').insertOne(req.body, (err, result) => {
+server.post('/api/vegrecipes', (req, res) => {
+  db.collection('vegrecipes').insertOne(req.body, (err, result) => {
     if (err) throw err;
 
     console.log('created in database');
@@ -71,13 +71,13 @@ server.post('/api/users', (req, res) => {
 });
 
 // update user based on info supplied in request body
-server.put('/api/users', (req, res) => {
+server.put('/api/vegrecipes', (req, res) => {
   // get the ID of the user to be updated
   const id  = req.body._id;
   // remove the ID so as not to overwrite it when updating
   delete req.body._id;
   // find a user matching this ID and update their details
-  db.collection('users').updateOne( {_id: new ObjectID(id) }, {$set: req.body}, (err, result) => {
+  db.collection('vegrecipes').updateOne( {_id: new ObjectID(id) }, {$set: req.body}, (err, result) => {
     if (err) throw err;
 
     console.log('updated in database');

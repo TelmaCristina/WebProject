@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 // Use "npm install axios" command to install
 import axios from 'axios';
 
-//Create User component that will create a new user card
-class CreateUser extends Component {
+//Create recipe component that will create a new recipe card
+class CreateRecipe extends Component {
     constructor(props) {
         super(props);
         // the form fields are stored in a state
@@ -37,8 +37,8 @@ class CreateUser extends Component {
         //preventDefault() is called on the event when it occurs to prevent a browser reload/refresh
         event.preventDefault();
 
-        //use axios to send a POST request to the server which includes the state information for the new user to be created
-        axios.post('/api/users', this.state)
+        //use axios to send a POST request to the server which includes the state information for the new recipe to be created
+        axios.post('/api/vegrecipes', this.state)
             //on success go to home
             .then(res => this.props.history.push('/'))
             .catch(error => {
@@ -52,7 +52,7 @@ class CreateUser extends Component {
             <div className="is-fluid">
                 {/*on form submit call handleSubmit()*/}
                 <form onSubmit={this.handleSubmit}>
-                    <h2 className="title is-1 has-text-primary">Create New User</h2>
+                    <h2 className="title is-1 has-text-primary">Create New recipe</h2>
                     <hr />
                     {/*main container for input fields*/}
                     <div className="container">
@@ -103,4 +103,4 @@ class CreateUser extends Component {
     }
 }
 
-export default CreateUser;
+export default CreateRecipe;

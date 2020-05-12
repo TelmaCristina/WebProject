@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 //import the Link component to use for linking prop information
 import { Link } from 'react-router-dom';
 
-// define one single user card component
-class User extends React.Component {
+// define one single recipe card component
+class Recipe extends React.Component {
   render() {
     return (
       <div className="column is-2" style={{ padding: "20px" }}>
@@ -39,4 +39,4 @@ class User extends React.Component {
   }
 }
 
-export default User;
+export default Recipe;

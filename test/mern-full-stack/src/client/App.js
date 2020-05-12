@@ -1,9 +1,9 @@
 import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 //import required components
-import CreateUser from './CreateUser';
+import CreateRecipe from './CreateRecipe';
 import EditUser from './EditUser';
-import UserList from './UserList';
+import UserList from './RecipeList';
 
 // this is the "main" component which sets up the React Router and respective routes
 const App = () => {
@@ -14,8 +14,8 @@ const App = () => {
         <Route exact path="/" component={UserList}/>
         {/*pass the id through the EditUser component*/}
         <Route path="/edit-user/:id" component={EditUser}/>
-        {/*set the path to create a new user to CreateUser component*/}
-        <Route path="/create-user" component={CreateUser}/>
+        {/*set the path to create a new recipe to CreateRecipe component*/}
+        <Route path="/create-user" component={CreateRecipe}/>
       </div>
     </HashRouter>
   );
