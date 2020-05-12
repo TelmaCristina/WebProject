@@ -69,7 +69,7 @@ class EditRecipe extends Component {
             <div className="is-fluid">
                 {/*on form submit call handleSubmit()*/}
                 <form onSubmit={this.handleSubmit}>
-                    <h2 className="title is-1 has-text-primary">Edit User</h2>
+                    <h2 className="title is-1 has-text-primary">Edit Recipe</h2>
                     <hr />
                     {/*main container for input fields*/}
                     <div className="container">

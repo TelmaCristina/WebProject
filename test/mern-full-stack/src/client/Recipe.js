@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 class Recipe extends React.Component {
   render() {
     return (
-      <div className="column is-2" style={{ padding: "20px" }}>
-        <div className="card" style={{ borderRadius: "20px" }}>
+      <div className="column is-one-third" style={{ padding: "20px" }}>
+        <div className="card large" style={{ borderRadius: "20px" }}>
           <div className="card-image">
             <figure className="image is-4by3">
               <img alt="Profile" src={this.props.image} />
@@ -24,7 +24,7 @@ class Recipe extends React.Component {
                 <button className="button is-danger" type="button" onClick={() => {this.props.handleDelete(this.props.id);}}>
                   Delete
                 </button>
-                {/*load the EditUser component via React Router and send the id over to the EditUser component*/}
+                {/*load the EditRecipe component via React Router and send the id over to the EditUser component*/}
                 <Link to={`/edit-recipe/${this.props.id}`}>
                   <button className="button is-primary" type="button">
                   Edit

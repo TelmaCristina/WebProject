@@ -76,10 +76,11 @@ class RecipeList extends Component {
 
         //return the list of vegrecipes
         return (
+
             <div className="is-fluid">
                 {/*Navigation bar*/}
                 <nav className="navbar">
-                    <h1 className="navbar-item title is-1 has-text-primary">Vegie Recipes</h1>
+                    <h1 className="navbar-item title is-1 has-text-primary">Go Veg</h1>
                     {/*when this button is pressed, CreateRecipe component will be rendered by using React Router*/}
                     <Link to={'/create-recipe'} className="navbar-item navbar-end">
                         <button className="button is-warning" type="button">Create new recipe</button>
