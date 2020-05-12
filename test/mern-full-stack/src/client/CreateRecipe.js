@@ -12,8 +12,6 @@ class CreateRecipe extends Component {
         // the form fields are stored in a state
         this.state = { 
             title: '', 
-            first: '', 
-            lastName: '', 
             quote: '', 
             picture: '' 
         };
@@ -65,13 +63,8 @@ class CreateRecipe extends Component {
                                     <input className="input is-small" type="text" name="title" value={this.state.title} onChange={this.handleChange} id="form" />
                                 </div>
                             </div>
+                            
                             <div className="field">
-                                <label className="label"> First Name: </label>
-                                <div className="control">
-                                    <input className="input is-small" type="text" name="first" value={this.state.first} onChange={this.handleChange} id="form" />
-                                </div>
-                            </div>
-                             <div className="field">
                                 <label className="label"> Picture: </label>
                                 <div className="control">
                                     <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
@@ -80,12 +73,6 @@ class CreateRecipe extends Component {
                         </div>
                         {/*SECOND COLUMN*/}
                         <div className="column">
-                            <div className="field">
-                                <label className="label"> Last Name: </label>
-                                <div className="control">
-                                    <input className="input is-small" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} id="form" />
-                                </div>
-                            </div>
                             <div className="field">
                                 <label className="label"> Quote: </label>
                                 <div className="control">

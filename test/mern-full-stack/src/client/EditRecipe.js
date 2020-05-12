@@ -13,8 +13,6 @@ class EditRecipe extends Component {
         // these should match the user object from the API
         this.state = {
             title: '',
-            first: '',
-            lastName: '',
             quote: '',
             picture: ''
         };
@@ -34,8 +32,6 @@ class EditRecipe extends Component {
                 this.setState({
                     _id: response.data._id,
                     title: response.data.title,
-                    first: response.data.first,
-                    lastName: response.data.lastName,
                     quote: response.data.quote,
                     picture: response.data.picture,
                 });
@@ -87,12 +83,6 @@ class EditRecipe extends Component {
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <label className="label"> First Name: </label>
-                                    <div className="control">
-                                        <input className="input is-small" type="text" name="first" value={this.state.first} onChange={this.handleChange} id="form" />
-                                    </div>
-                                </div>
-                                <div className="field">
                                     <label className="label"> Picture: </label>
                                     <div className="control">
                                         <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
@@ -101,12 +91,7 @@ class EditRecipe extends Component {
                             </div>
                             {/*SECOND COLUMN*/}
                             <div className="column">
-                                <div className="field">
-                                    <label className="label"> Last Name: </label>
-                                    <div className="control">
-                                        <input className="input is-small" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} id="form" />
-                                    </div>
-                                </div>
+                                
                                 <div className="field">
                                     <label className="label"> Quote: </label>
                                     <div className="control">

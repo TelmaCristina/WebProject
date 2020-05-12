@@ -67,8 +67,6 @@ class RecipeList extends Component {
                 key={u._id}
                 id={u._id}
                 title={u.title}
-                first={u.first}
-                lastName={u.lastName}
                 image={u.picture}
                 quote={u.quote}
                 //you must include the handleDelete method to use in child components
@@ -81,7 +79,7 @@ class RecipeList extends Component {
             <div className="is-fluid">
                 {/*Navigation bar*/}
                 <nav className="navbar">
-                    <h1 className="navbar-item title is-1 has-text-primary">List of Users</h1>
+                    <h1 className="navbar-item title is-1 has-text-primary">Vegie Recipes</h1>
                     {/*when this button is pressed, CreateRecipe component will be rendered by using React Router*/}
                     <Link to={'/create-recipe'} className="navbar-item navbar-end">
                         <button className="button is-warning" type="button">Create new recipe</button>
