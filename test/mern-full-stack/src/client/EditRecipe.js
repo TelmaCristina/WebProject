@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 //Edit User component that will edit the clicked on user with passed id
-class EditUser extends Component {
+class EditRecipe extends Component {
     constructor(props) {
         super(props);
         // store the related to the user information into the state
@@ -124,4 +124,4 @@ class EditUser extends Component {
     }
 }
 
-export default EditUser;
+export default EditRecipe;

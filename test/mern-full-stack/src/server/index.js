@@ -30,7 +30,7 @@ server.use(bodyParser.json());
 
 // DEFINE ENDPOINTS
 
-// retrieve all user objects from DB
+// retrieve all recipe objects from DB
 server.get('/api/vegrecipes', (req, res) => {
   db.collection('vegrecipes').find().toArray((err, result) => {
     if (err) throw err;
@@ -40,7 +40,7 @@ server.get('/api/vegrecipes', (req, res) => {
   });
 });
 
-// retrieve user with specific ID from DB
+// retrieve recipe with specific ID from DB
 server.get('/api/vegrecipes/:id', (req, res) => {
   db.collection('vegrecipes').findOne({_id: new ObjectID(req.params.id) }, (err, result) => {
     if (err) throw err;
@@ -60,7 +60,7 @@ server.delete('/api/vegrecipes', (req, res) => {
   });
 });
 
-// create new user based on info supplied in request body
+// create new recipe based on info supplied in request body
 server.post('/api/vegrecipes', (req, res) => {
   db.collection('vegrecipes').insertOne(req.body, (err, result) => {
     if (err) throw err;
@@ -70,9 +70,9 @@ server.post('/api/vegrecipes', (req, res) => {
   });
 });
 
-// update user based on info supplied in request body
+// update recipe based on info supplied in request body
 server.put('/api/vegrecipes', (req, res) => {
-  // get the ID of the user to be updated
+  // get the ID of the recipe to be updated
   const id  = req.body._id;
   // remove the ID so as not to overwrite it when updating
   delete req.body._id;

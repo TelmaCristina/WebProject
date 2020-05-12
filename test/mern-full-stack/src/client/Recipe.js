@@ -25,7 +25,7 @@ class Recipe extends React.Component {
                   Delete
                 </button>
                 {/*load the EditUser component via React Router and send the id over to the EditUser component*/}
-                <Link to={`/edit-user/${this.props.id}`}>
+                <Link to={`/edit-recipe/${this.props.id}`}>
                   <button className="button is-primary" type="button">
                   Edit
                   </button>

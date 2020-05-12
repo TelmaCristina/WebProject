@@ -20,17 +20,17 @@ class RecipeList extends Component {
 
         //this binding is necessary to make `this` work in the callback
         //generally, if you refer to a method without () after it, such as onClick={this.handleClick}, you should bind that method
-        this.updateUsers = this.updateUsers.bind(this);
+        this.updateRecipes = this.updateRecipes.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
     }
 
     // fetch all recipe data from the server when the component mounts
     componentDidMount() {
-        this.updateUsers();
+        this.updateRecipes();
     }
 
     //
-    updateUsers() {
+    updateRecipes() {
         // get the vegrecipes API using axios GET request to the server 
         axios.get('api/vegrecipes')
             .then(response => {
@@ -42,17 +42,17 @@ class RecipeList extends Component {
             });
     }
 
-    handleDelete(userId) {
+    handleDelete(recipeID) {
         // make a DELETE request to the server which will handle the removal of the recipe with the specific recipeId
         axios
             .delete('api/vegrecipes', {
                 data: {
-                    id: userId
+                    id: recipeID
                 }
             })
             .then(response => {
                 //if the deletion was successful then re-render the list of vegrecipes
-                this.updateUsers();
+                this.updateRecipes();
             })
             .catch(error => {
                 console.log(error);
@@ -61,7 +61,7 @@ class RecipeList extends Component {
 
     render() {
         // produce a recipe component for each recipe object
-        const userList = this.state.vegrecipes.map(u => (
+        const recipeList = this.state.vegrecipes.map(u => (
             //map through each element in the array and set to the value received from the server
             <Recipe
                 key={u._id}
@@ -83,15 +83,15 @@ class RecipeList extends Component {
                 <nav className="navbar">
                     <h1 className="navbar-item title is-1 has-text-primary">List of Users</h1>
                     {/*when this button is pressed, CreateRecipe component will be rendered by using React Router*/}
-                    <Link to={'/create-user'} className="navbar-item navbar-end">
+                    <Link to={'/create-recipe'} className="navbar-item navbar-end">
                         <button className="button is-warning" type="button">Create new recipe</button>
                     </Link>
                 </nav>
                 <hr />
-                {/*USER LIST*/}
+                {/*RECIPE LIST*/}
                 <div>
                     <div className="columns is-multiline">
-                        {userList}
+                        {recipeList}
                     </div>
                 </div>
                 {/*FOOTER*/}
