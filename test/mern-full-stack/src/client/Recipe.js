@@ -8,9 +8,9 @@ class Recipe extends React.Component {
   render() {
     return (
       <div className="column is-one-third" style={{ padding: "20px" }}>
-        <div className="card large" style={{ borderRadius: "20px" }}>
+        <div className="card small" style={{ borderRadius: "20px" }}>
           <div className="card-image">
-            <figure className="image is-4by3">
+            <figure className="image is-3by3">
               <img alt="Profile" src={this.props.image} />
             </figure>
           </div>

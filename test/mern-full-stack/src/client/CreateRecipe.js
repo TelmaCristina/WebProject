@@ -51,8 +51,7 @@ class CreateRecipe extends Component {
             <div className="is-fluid">
                 {/*on form submit call handleSubmit()*/}
                 <form onSubmit={this.handleSubmit}>
-                   <h2 className="title is-1 has-text-primary">New Recipe</h2>
-                   <hr />
+                   <h2 className="title is-1 has-text-primary">New Dish</h2>                 
                     {/*main container for input fields*/}
                     <div className="container">
                     {/*FIRST COLUMN*/}
@@ -84,10 +83,11 @@ class CreateRecipe extends Component {
                     </div>
                     {/*SUBMIT BUTTON*/}
                     <input className="button is-primary" type="submit" value="Submit" />
-                    </div>
-                </form>
-            </div>
+                    </div>                                                                  
+                </form>                
+            </div>            
         );
+        
     }
 }
 

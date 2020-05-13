@@ -60,6 +60,10 @@ class RecipeList extends Component {
     }
 
     render() {
+
+        const styles = {
+        color:'blue'  
+    }
         // produce a recipe component for each recipe object
         const recipeList = this.state.vegrecipes.map(u => (
             //map through each element in the array and set to the value received from the server
@@ -71,7 +75,7 @@ class RecipeList extends Component {
                 quote={u.quote}
                 //you must include the handleDelete method to use in child components
                 handleDelete={this.handleDelete}
-            />
+            />            
         ));
 
         //return the list of vegrecipes
@@ -80,13 +84,13 @@ class RecipeList extends Component {
             <div className="is-fluid">
                 {/*Navigation bar*/}
                 <nav className="navbar">
-                    <h1 className="navbar-item title is-1 has-text-primary">Recipe Notebook</h1>
+                    <h1 className="title is-1 has-text-primary" style={{ fontSize: "40px"}}>Go Vegy</h1>
                     {/*when this button is pressed, CreateRecipe component will be rendered by using React Router*/}
                     <Link to={'/create-recipe'} className="navbar-item navbar-end">
-                        <button className="button is-warning" type="button">New Recipe</button>
+                        <button className="button is-warning" type="button">New Dish</button>
                     </Link>
                 </nav>
-                <hr />
+               
                 {/*RECIPE LIST*/}
                 <div>
                     <div className="columns is-multiline">
@@ -94,7 +98,7 @@ class RecipeList extends Component {
                     </div>
                 </div>
                 {/*FOOTER*/}
-                <footer className="footer has-background-primary">
+                <footer className>
                     <div className="content has-text-centered">
                         <p className="has-text-white-bis"><strong>Created by Telma</strong> styled with Bulma.</p>
                     </div>
