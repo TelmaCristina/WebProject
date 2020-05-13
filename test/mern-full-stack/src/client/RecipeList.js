@@ -76,27 +76,27 @@ class RecipeList extends Component {
 
         //return the list of vegrecipes
         return (
-
+            
             <div className="is-fluid">
                 {/*Navigation bar*/}
                 <nav className="navbar">
-                    <h1 className="navbar-item title is-1 has-text-primary">Go Veg</h1>
+                    <h1 className="navbar-item title is-1 has-text-primary">Recipe Notebook</h1>
                     {/*when this button is pressed, CreateRecipe component will be rendered by using React Router*/}
                     <Link to={'/create-recipe'} className="navbar-item navbar-end">
-                        <button className="button is-warning" type="button">Create new recipe</button>
+                        <button className="button is-warning" type="button">New Recipe</button>
                     </Link>
                 </nav>
                 <hr />
                 {/*RECIPE LIST*/}
                 <div>
                     <div className="columns is-multiline">
-                        {recipeList}
+                        {recipeList}                        
                     </div>
                 </div>
                 {/*FOOTER*/}
                 <footer className="footer has-background-primary">
                     <div className="content has-text-centered">
-                        <p className="has-text-white-bis"><strong>Random Recipe API</strong> styled with Bulma.</p>
+                        <p className="has-text-white-bis"><strong>Created by Telma</strong> styled with Bulma.</p>
                     </div>
                 </footer>
             </div>

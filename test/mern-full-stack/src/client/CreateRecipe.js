@@ -46,12 +46,13 @@ class CreateRecipe extends Component {
 
     render() {
         // remember that the name of the input fields should match the state
-        return (
+        
+       return (
             <div className="is-fluid">
                 {/*on form submit call handleSubmit()*/}
                 <form onSubmit={this.handleSubmit}>
-                    <h2 className="title is-1 has-text-primary">Create New recipe</h2>
-                    <hr />
+                   <h2 className="title is-1 has-text-primary">New Recipe</h2>
+                   <hr />
                     {/*main container for input fields*/}
                     <div className="container">
                     {/*FIRST COLUMN*/}

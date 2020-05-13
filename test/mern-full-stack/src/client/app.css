@@ -1,4 +1,12 @@
 #form{
     width: 500px;
-     }
-
+}
+body{
+    font-family: 'Times New Roman';
+    background-image: url("back.png");
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+   } 
+ 
