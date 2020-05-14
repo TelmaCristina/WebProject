@@ -21,12 +21,12 @@ class Recipe extends React.Component {
                 <hr/>
                 <p className="subtitle is-size-6">{this.props.quote}</p>
                 {/*delete the prop with requested id from the function invoked in the parent component*/}
-                <button className="button is-danger" type="button" onClick={() => {this.props.handleDelete(this.props.id);}}>
+                <button className="button is-danger" style={{backgroundColor:'green'}} type="button" onClick={() => {this.props.handleDelete(this.props.id);}}>
                   Delete
                 </button>
-                {/*load the EditRecipe component via React Router and send the id over to the EditUser component*/}
+                {/*load the NewRecipe component via React Router and send the id over to the NewRecipe component*/}
                 <Link to={`/edit-recipe/${this.props.id}`}>
-                  <button className="button is-primary" type="button">
+                  <button className="button is-primary" style={{backgroundColor:'turquoise'}} type="button">
                   Edit
                   </button>
                 </Link>

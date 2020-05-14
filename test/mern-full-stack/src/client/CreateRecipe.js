@@ -51,7 +51,7 @@ class CreateRecipe extends Component {
             <div className="is-fluid">
                 {/*on form submit call handleSubmit()*/}
                 <form onSubmit={this.handleSubmit}>
-                   <h2 className="title is-1 has-text-primary">New Dish</h2>                 
+                   <h2 className="title is-1 is-family-monospace" style={{color: 'green'}}>New Recipe</h2>                 
                     {/*main container for input fields*/}
                     <div className="container">
                     {/*FIRST COLUMN*/}
@@ -62,8 +62,7 @@ class CreateRecipe extends Component {
                                 <div className="control">
                                     <input className="input is-small" type="text" name="title" value={this.state.title} onChange={this.handleChange} id="form" />
                                 </div>
-                            </div>
-                            
+                            </div>                            
                             <div className="field">
                                 <label className="label"> Picture: </label>
                                 <div className="control">
@@ -73,7 +72,7 @@ class CreateRecipe extends Component {
                         </div>
                         {/*SECOND COLUMN*/}
                         <div className="column">
-                            <div className="field">
+                            <div className="field" style={{}}>
                                 <label className="label"> Quote: </label>
                                 <div className="control">
                                     <input className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form" />
@@ -82,7 +81,7 @@ class CreateRecipe extends Component {
                         </div>
                     </div>
                     {/*SUBMIT BUTTON*/}
-                    <input className="button is-primary" type="submit" value="Submit" />
+                    <input className="button is-primary" style={{backgroundColor:'green'}} type="submit" value="Submit" />
                     </div>                                                                  
                 </form>                
             </div>            

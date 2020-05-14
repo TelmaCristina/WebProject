@@ -61,9 +61,6 @@ class RecipeList extends Component {
 
     render() {
 
-        const styles = {
-        color:'blue'  
-    }
         // produce a recipe component for each recipe object
         const recipeList = this.state.vegrecipes.map(u => (
             //map through each element in the array and set to the value received from the server
@@ -81,13 +78,13 @@ class RecipeList extends Component {
         //return the list of vegrecipes
         return (
             
-            <div className="is-fluid">
+            <div className="is fluid">
                 {/*Navigation bar*/}
                 <nav className="navbar">
-                    <h1 className="title is-1 has-text-primary" style={{ fontSize: "40px"}}>Go Vegy</h1>
+                    <h1 className="title is-1 is-family-monospace" style={{color: 'green'}}>Go Vegy</h1>
                     {/*when this button is pressed, CreateRecipe component will be rendered by using React Router*/}
                     <Link to={'/create-recipe'} className="navbar-item navbar-end">
-                        <button className="button is-warning" type="button">New Dish</button>
+                        <button className="button is-warning" type="button">New Recipe</button>
                     </Link>
                 </nav>
                
