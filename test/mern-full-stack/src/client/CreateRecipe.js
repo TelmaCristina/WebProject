@@ -72,10 +72,10 @@ class CreateRecipe extends Component {
                         </div>
                         {/*SECOND COLUMN*/}
                         <div className="column">
-                            <div className="field" style={{}}>
+                            <div className="field">
                                 <label className="label"> Quote: </label>
                                 <div className="control">
-                                    <input className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form" />
+                                    <textarea className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form" />
                                 </div>
                             </div>
                         </div>

@@ -11,13 +11,13 @@ class Recipe extends React.Component {
         <div className="card small" style={{ borderRadius: "20px" }}>
           <div className="card-image">
             <figure className="image is-3by3">
-              <img alt="Profile" src={this.props.image} />
+              <img alt="Recipe" src={this.props.image} />
             </figure>
           </div>
           <div className="card-content">
             <div className="media">
               <div className="media-content">
-                <p className="title is-4 has-text-primary">{this.props.first}</p>
+                <p className="title is-5 has-text-primary">{this.props.title}</p>
                 <hr/>
                 <p className="subtitle is-size-6">{this.props.quote}</p>
                 {/*delete the prop with requested id from the function invoked in the parent component*/}

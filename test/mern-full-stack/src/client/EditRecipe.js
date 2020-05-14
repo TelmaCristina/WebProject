@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 //Axios provides support for request and response interceptors, transformers and auto-conversion to JSON
 // Use "npm install axios" command to install
 import axios from 'axios';
+import './app.css';
+
 
 //Edit User component that will edit the clicked on user with passed id
 class EditRecipe extends Component {
@@ -85,23 +87,22 @@ class EditRecipe extends Component {
                                 <div className="field">
                                     <label className="label"> Picture: </label>
                                     <div className="control">
-                                        <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
+                                        <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />                                        
                                     </div>
                                 </div>
                             </div>
                             {/*SECOND COLUMN*/}
-                            <div className="column">
-                                
+                            <div className="column">                                
                                 <div className="field">
                                     <label className="label"> Quote: </label>
-                                    <div className="control" style={{blockSize: '100px'}}>
-                                        <input className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form" />
-                                    </div>
+                                    <div className="control">
+                                        <textarea className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form"/>                                                                       
+                                    </div>                            
                                 </div>
                             </div>
                         </div>
                         {/*SUBMIT BUTTON*/}
-                        <input className="button is-primary" style={{backgroundColor:'green'}} type="submit" value="Submit" />
+                        <input className="button is-primary" style={{backgroundColor:'green'}} type="submit" value="Submit"/>
                     </div>
                 </form>
             </div>
