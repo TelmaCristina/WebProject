@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //import the Link component to use for linking prop information
 import { Link } from 'react-router-dom';
+import './app.css';
 
 // define one single recipe card component
 class Recipe extends React.Component {

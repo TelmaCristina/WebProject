@@ -10,4 +10,7 @@ body{
     background-attachment: fixed;
     background-size:  cover;
    }
+   .quote{
+    text-align: justify;
+   }
    
