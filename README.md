@@ -9,8 +9,6 @@ shot of your dish!
 
 The app was created using React, JavaScript, Axios CSS and Bulma. 
 
-## Project Screenshot
-
 ## How to get it running
 
 Open this repository in GitPod and instal npm, node, axios and Bulma to get the full version of the application
@@ -24,7 +22,7 @@ When everything is installed, write the command bellow to run it
 ```
 npm run dev
 ```
- 
+## Project Screenshot
 
 
 
