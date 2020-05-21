@@ -20,7 +20,7 @@ class Recipe extends React.Component {
               <div className="media-content">
                 <p className="title is-5 has-text-primary">{this.props.title}</p>
                 <hr/>
-                <p className="subtitle is-size-6">{this.props.quote}</p>
+                <p className="subtitle is-size-6">{this.props.ingredients}</p>
                 {/*delete the prop with requested id from the function invoked in the parent component*/}
                 <button className="button is-danger" style={{backgroundColor:'green'}} type="button" onClick={() => {this.props.handleDelete(this.props.id);}}>
                   Delete

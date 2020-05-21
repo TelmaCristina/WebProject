@@ -88,7 +88,7 @@ class RecipeList extends Component {
                 id={veg._id}
                 title={veg.title}
                 image={veg.picture}
-                quote={veg.quote}
+                ingredients={veg.ingredients}
                 //you must include the handleDelete method to use in child components
                 handleDelete={this.handleDelete}
             />     
@@ -102,10 +102,10 @@ class RecipeList extends Component {
                 <nav className="navbar">
                     <h1 className="title is-1 is-family-monospace" style={{color: 'green'}}>Go Vegy</h1>
 
-                     {/*FILTER INPUTS*/}
+                     {/*FILTER INPUT*/}
                      <div className="column" style={{ padding:"30px"}}>                           
                            
-                       <InputLabels name="searchInput" label="" value={this.state.searchInput} handleChange={this.handleChange} placeholder={"e.g. vegan beetroot"} />
+                       <InputLabels name="searchInput" label="" value={this.state.searchInput} handleChange={this.handleChange} placeholder={"search for recipe"} />
                             
                     </div>
                     {/*when this button is pressed, CreateRecipe component will be rendered by using React Router*/}

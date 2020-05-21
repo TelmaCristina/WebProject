@@ -12,7 +12,7 @@ class CreateRecipe extends Component {
         // the form fields are stored in a state
         this.state = { 
             title: '', 
-            quote: '', 
+            ingredients: '', 
             picture: '' 
         };
 
@@ -68,20 +68,21 @@ class CreateRecipe extends Component {
                                 <div className="control">
                                     <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
                                 </div>
+                                <br/>
+                                 {/*SUBMIT BUTTON*/}
+                                <input className="button is-primary" style={{backgroundColor:'green'}} type="submit" value="Submit" />
                             </div>
                         </div>
                         {/*SECOND COLUMN*/}
                         <div className="column">
                             <div className="field">
-                                <label className="label"> Quote: </label>
+                                <label className="label"> Ingredients: </label>
                                 <div className="control">
-                                    <textarea className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form" />
+                                    <textarea className="input is-small" type="text" name="ingredients" value={this.state.ingredients} onChange={this.handleChange} id="form" />
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {/*SUBMIT BUTTON*/}
-                    <input className="button is-primary" style={{backgroundColor:'green'}} type="submit" value="Submit" />
+                    </div>                   
                     </div>                                                                  
                 </form>                
             </div>            
