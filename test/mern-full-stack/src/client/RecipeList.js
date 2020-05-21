@@ -7,6 +7,7 @@ import Recipe from './Recipe';
 // Use "npm install axios" command to install
 import axios from 'axios';
 import './app.css';
+import InputLabels from'./InputLabels';
 // import stylesheet 
 //MAKE SURE TO INSTALL USING npm install bulma
 import 'bulma/css/bulma.css';
@@ -16,12 +17,20 @@ class RecipeList extends Component {
     constructor(props) {
         super(props);
         // store the vegrecipes array in the state
-        this.state = { vegrecipes: [] };
+        this.state = { 
+            vegrecipes: [],
+            singleRecipe: {},
+            searchInput:'',
+            inputValue:'',
+            contrastMode: false
+
+         };
 
         //this binding is necessary to make `this` work in the callback
         //generally, if you refer to a method without () after it, such as onClick={this.handleClick}, you should bind that method
         this.updateRecipes = this.updateRecipes.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     // fetch all recipe data from the server when the component mounts
@@ -59,22 +68,32 @@ class RecipeList extends Component {
             });
     }
 
-    render() {
+     handleChange(event) {
+        //handle <select> UI elements
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
+    }
+    render() {        
 
         // produce a recipe component for each recipe object
-        const recipeList = this.state.vegrecipes.map(u => (
+        const recipeList = this.state.vegrecipes.map(veg => (
             //map through each element in the array and set to the value received from the server
             <Recipe
-                key={u._id}
-                id={u._id}
-                title={u.title}
-                image={u.picture}
-                quote={u.quote}
+                key={veg._id}
+                id={veg._id}
+                title={veg.title}
+                image={veg.picture}
+                quote={veg.quote}
                 //you must include the handleDelete method to use in child components
                 handleDelete={this.handleDelete}
-            />            
-        ));
-
+            />     
+        ));       
+        
         //return the list of vegrecipes
         return (
             
@@ -82,7 +101,15 @@ class RecipeList extends Component {
                 {/*Navigation bar*/}
                 <nav className="navbar">
                     <h1 className="title is-1 is-family-monospace" style={{color: 'green'}}>Go Vegy</h1>
+
+                     {/*FILTER INPUTS*/}
+                     <div className="column" style={{ padding:"30px"}}>                           
+                           
+                       <InputLabels name="searchInput" label="" value={this.state.searchInput} handleChange={this.handleChange} placeholder={"e.g. vegan beetroot"} />
+                            
+                    </div>
                     {/*when this button is pressed, CreateRecipe component will be rendered by using React Router*/}
+
                     <Link to={'/create-recipe'} className="navbar-item navbar-end">
                         <button className="button is-warning" type="button">New Recipe</button>
                     </Link>
