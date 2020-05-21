@@ -24,7 +24,7 @@ npm run dev
 ```
 ## Project Screenshot
 
-https://github.com/TelmaCristina/WebProject/issues/2#issue-622452077
+
 
 
 
