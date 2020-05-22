@@ -78,7 +78,7 @@ class CreateRecipe extends Component {
                             <div className="field">
                                 <label className="label"> Ingredients: </label>
                                 <div className="control">
-                                    <textarea className="input is-small" type="text" name="ingredients" value={this.state.ingredients} onChange={this.handleChange} id="form" />
+                                    <textarea className ="input is-small" cols="30" rows="5" type="text" name="ingredients" value={this.state.ingredients} onChange={this.handleChange} id="form" />
                                 </div>
                             </div>
                         </div>
