@@ -22,6 +22,9 @@ When everything is installed, write the command bellow to run it
 ```
 npm run dev
 ```
+## Heroku Link
+https://go-vegy.herokuapp.com/#/
+
 ## Project Screenshot
 
 <img width="484" alt="webapp" src="https://user-images.githubusercontent.com/56304406/82557868-6b73af80-9b64-11ea-8956-b1fc8ae68104.png">
