@@ -31,4 +31,4 @@ https://go-vegy.herokuapp.com/#/
 
 <img width="482" alt="webapp" src="https://user-images.githubusercontent.com/56304406/82657543-70486a00-9c1d-11ea-8efb-2e86367920cb.png">
 
-
+<img width="481" alt="webapp" src="https://user-images.githubusercontent.com/56304406/82657699-b271ab80-9c1d-11ea-8e70-abef8f5a10e3.png">
