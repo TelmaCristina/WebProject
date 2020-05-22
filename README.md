@@ -27,4 +27,5 @@ https://go-vegy.herokuapp.com/#/
 
 ## Project Screenshot
 
-<img width="484" alt="webapp" src="https://user-images.githubusercontent.com/56304406/82557868-6b73af80-9b64-11ea-8956-b1fc8ae68104.png">
+<img width="480" alt="webapp" src="https://user-images.githubusercontent.com/56304406/82657244-f4e6b880-9c1c-11ea-8cba-a33cfcf7d205.png">
+
